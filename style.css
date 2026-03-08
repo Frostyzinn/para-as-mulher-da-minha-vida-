@@ -1,0 +1,98 @@
+:root {
+    --primary: #db2777;
+    --primary-dark: #9d174d;
+    --bg-light: #fff5f7;
+    --bg-dark: #0f172a;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --card-bg: #ffffff;
+}
+
+.dark {
+    --bg-light: var(--bg-dark);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --card-bg: #1e293b;
+}
+
+/* Reset e Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { 
+    font-family: 'Poppins', sans-serif; 
+    color: var(--text-main); 
+    background: var(--bg-light); 
+    line-height: 1.6; 
+    transition: background 0.4s, color 0.4s; 
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+.section-padding { padding: 80px 0; }
+
+/* Navegação */
+#navbar { 
+    position: fixed; width: 100%; top: 0; z-index: 1000; 
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(10px); 
+    height: 80px; display: flex; align-items: center; 
+    border-bottom: 1px solid rgba(0,0,0,0.05); 
+}
+.dark #navbar { background: rgba(15, 23, 42, 0.85); border-color: rgba(255,255,255,0.1); }
+
+.nav-content { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: bold; color: var(--primary); }
+.nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+.nav-links a { text-decoration: none; color: inherit; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+.btn-mae { background: var(--primary); color: white !important; padding: 10px 20px; border-radius: 50px; }
+#theme-toggle { background: none; border: none; cursor: pointer; font-size: 1.2rem; }
+
+/* Hero Section */
+.hero { 
+    height: 100vh; 
+    background: url('https://images.unsplash.com/photo-1518837695029-00667a925772?auto=format&fit=crop&q=80') center/cover; 
+    display: flex; align-items: center; position: relative; color: white; 
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.7), transparent); }
+.hero-text { position: relative; z-index: 2; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px; }
+.badge { background: var(--primary); padding: 5px 15px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 20px; display: inline-block; }
+
+/* Cards */
+.section-title { text-align: center; margin-bottom: 50px; }
+.section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary-dark); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card { background: var(--card-bg); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+.card .icon { font-size: 2rem; margin-bottom: 15px; }
+
+/* Poemas */
+.poem-section { padding: 100px 0; background: #fff1f2; color: #1e293b; }
+.dark .poem-section { background: #1a1c2e; color: white; }
+.poem-text { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 2.2rem); font-style: italic; transition: opacity 0.4s; min-height: 120px; display: flex; align-items: center; justify-content: center; }
+.btn-next { margin-top: 30px; padding: 12px 35px; border: 2px solid var(--primary); background: transparent; color: var(--primary); cursor: pointer; font-weight: bold; border-radius: 50px; transition: 0.3s; }
+.btn-next:hover { background: var(--primary); color: white; }
+
+/* Santuário da Mãe */
+.mother-sanctuary { padding: 100px 0; background: var(--bg-dark); color: white; }
+.mother-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center; }
+.tag { color: var(--primary); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; }
+.mother-text h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 15px 0; }
+.signature { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.5rem; color: var(--primary); margin-top: 30px; }
+
+/* Foto Organizada */
+.mother-photo {
+    max-width: 350px; width: 100%; border-radius: 20px;
+    display: block; margin: 0 auto;
+    border: 5px solid rgba(219, 39, 119, 0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    object-fit: cover; aspect-ratio: 4/5;
+}
+
+/* Animações */
+.reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+footer { padding: 40px 0; text-align: center; opacity: 0.6; font-size: 0.8rem; }

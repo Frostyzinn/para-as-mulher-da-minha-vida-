@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eterna Essência | Homenagem às Mulheres</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-content">
+            <div class="logo">M∞M</div>
+            <ul class="nav-links">
+                <li><a href="aprendizado.html">Aprendizado</a></li>
+                <li><a href="poemas.html">Poemas</a></li>
+                <li><a href="mae.html" class="btn-mae">Para Minha Mãe</a></li>
+                <li><button id="theme-toggle" aria-label="Alternar tema">🌓</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-text">
+            <span class="badge">Homenagem Especial</span>
+            <h1 class="reveal">O mundo se ilumina através de <br><span id="typewriter"></span></h1>
+            <p class="reveal">Uma celebração àquelas que nos ensinam o verdadeiro significado de força, resiliência e amor incondicional.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="aprendizado" class="container section-padding">
+            <div class="section-title reveal">
+                <h2>O que aprendo com elas</h2>
+                <p>Cada dia é uma nova lição de vida compartilhada.</p>
+            </div>
+            <div class="grid">
+                <div class="card reveal">
+                    <div class="icon">🌿</div>
+                    <h3>Resiliência</h3>
+                    <p>Aprendo que a delicadeza não exclui a força. É possível enfrentar tempestades e ainda florescer.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="icon">💡</div>
+                    <h3>Sabedoria</h3>
+                    <p>O olhar feminino enxerga além das superfícies, ensinando-me a ler o silêncio e as intenções.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="icon">🤝</div>
+                    <h3>Empatia</h3>
+                    <p>A capacidade de se colocar no lugar do outro e cuidar é a maior inteligência que existe.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="poemas" class="poem-section">
+            <div class="container text-center reveal">
+                <div id="poem-display">
+                    <p class="poem-text" id="poem-content">"Mulher é o verso mais bonito que a vida já escreveu no livro da existência."</p>
+                </div>
+                <button onclick="changePoem()" class="btn-next">Próximo Verso</button>
+            </div>
+        </section>
+
+        <section id="mae" class="mother-sanctuary">
+            <div class="container reveal">
+                <div class="mother-grid">
+                    <div class="mother-text">
+                        <span class="tag">Minha Referência</span>
+                        <h2>Para a mulher que me deu <strong>Tudo</strong></h2>
+                        <p>Mãe, existem infinitas mulheres inspiradoras no mundo, mas nenhuma chega aos pés do seu legado na minha vida.</p>
+                        <p>Tudo o que sou hoje, eu aprendi observando sua coragem. Obrigado por sacrificar seus sonhos para que os meus pudessem nascer. Te amo infinitamente.</p>
+                        <div class="signature">Com todo o meu amor.</div>
+                    </div>
+                    <div class="mother-image-container">
+                        <img src="WhatsApp Image 2026-03-08 at 12.11.44.jpeg" alt="Minha Mãe" class="mother-photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Eterna Essência. Criado com admiração e carinho.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
